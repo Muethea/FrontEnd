@@ -4,7 +4,7 @@ import {
   LOGIN_ACTION,
   LOGOUT_ACTION,
   SET_USER_TOKEN_DATA_MUTATION,
-  SIGNUP_ACTION,
+  SIGNUP_ACTION
 } from '../../storeconstants'
 import SingupValidations from '../../../services/SignupValidations'
 import Axios from 'axios'
@@ -21,13 +21,13 @@ export default {
     localStorage.removeItem('userData')
   },
 
-  async [LOGIN_ACTION](context, payload) {
-    return context.dispatch(AUTH_ACTION, {
-      ...payload,
-      url: `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=
-        AIzaSyBxGt8MN7aI3Ouv3_WT3aMPcmmPe-Goscs`
-    })
-  },
+  // async [LOGIN_ACTION](context, payload) {
+  //   return context.dispatch(AUTH_ACTION, {
+  //     ...payload,
+  //     url: `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=
+  //       AIzaSyBxGt8MN7aI3Ouv3_WT3aMPcmmPe-Goscs`
+  //   })
+  // },
 
   async [SIGNUP_ACTION](context, payload) {
     return context.dispatch(AUTH_ACTION, {
@@ -37,14 +37,12 @@ export default {
     })
   },
 
-  
-    [AUTO_LOGIN_ACTION] (context){
-        let userData = localStorage.getItem('userData');
-        if (userData) {
-          context.commit(SET_USER_TOKEN_DATA_MUTATION, JSON.parse(userData))
-          
-        }
-    },
+  [AUTO_LOGIN_ACTION](context) {
+    let userData = localStorage.getItem('userData')
+    if (userData) {
+      context.commit(SET_USER_TOKEN_DATA_MUTATION, JSON.parse(userData))
+    }
+  },
 
   async [AUTH_ACTION](context, payload) {
     let postData = {

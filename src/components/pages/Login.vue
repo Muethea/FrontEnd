@@ -94,8 +94,10 @@ const Login = () => {
         }
         error.value = '';
 
-     const   url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=
-        AIzaSyBxGt8MN7aI3Ouv3_WT3aMPcmmPe-Goscs`
+        /*URL FIREBASE - https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=
+  AIzaSyBxGt8MN7aI3Ouv3_WT3aMPcmmPe - Goscs
+*/
+    const   url = `http://mz.nsdevil.com/cwb/api/auth/login`
 
       axios.post(url, { "email": email.value, "password": password.value })
       .then(response => { 

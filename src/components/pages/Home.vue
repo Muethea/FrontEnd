@@ -13,12 +13,12 @@
 
       </button>
       <div class="lucas">
-        <font-awesome-icon icon="fa-solid fa-arrow-pointer" size="xl" style="color: #1d0887;" /> <span>Lucas</span>
+        <!-- <font-awesome-icon icon="fa-solid fa-arrow-pointer" size="xl" style="color: #1d0887;" /> <span>Lucas</span> -->
       </div>
 
       <div class="fernando">
         <div class="note"></div>
-        <font-awesome-icon icon="fa-solid fa-arrow-pointer" size="xl" style="color: #fe2;" /> <span>Fernando</span>
+        <!-- <font-awesome-icon icon="fa-solid fa-arrow-pointer" size="xl" style="color: #fe2;" /> <span>Fernando</span> -->
       </div>
 
     </section>
