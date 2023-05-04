@@ -47,7 +47,6 @@
               {{ errors.password.value }}
             </div>
           </div>
-
           <div class="btns">
             <!-- Submit button -->
             <button  type="submit" class=" btnlogin">
@@ -56,9 +55,6 @@
 
             <router-link to="/sigunp">Don't have an acoount</router-link>
           </div>
-
-
-
         </form>
       </div>
 
