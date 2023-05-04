@@ -26,11 +26,9 @@
 
 
       <div class="card  ">
-
-
-        <h2>Login</h2>
+        <h2>Login 2</h2>
         <div class="alert alert-danger" v-if="error">{{ error }}</div>
-        <form @submit.prevent="Login()">
+        <form @submit.prevent="Login">
           <!-- Email input -->
           <div class="form-outline ">
             <label class="form-label">Email </label>
@@ -40,20 +38,19 @@
               {{ errors.email }}
             </div>
           </div>
-
           <!-- Password input -->
           <div class="form-outline ">
             <label class="form-label">Password</label>
 
             <input type="password" class="form-control" placeholder="password" v-model.trim="password" />
             <div class="error" v-if="errors.password">
-              {{ errors.password }}
+              {{ errors.password.value }}
             </div>
           </div>
 
           <div class="btns">
             <!-- Submit button -->
-            <button type="submit" class=" btnlogin">
+            <button  type="submit" class=" btnlogin">
               Login
             </button>
 
@@ -71,66 +68,113 @@
   </main>
 </template>
 
-<script>
-import { mapActions, mapMutations } from 'vuex';
+<script setup>
+
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+import SignupValidations from '../../services/SignupValidations';
+import axios from 'axios';
+const email = ref('')
+
+const password = ref ('');
+const  errors =ref([]);
+const  error = ref ('');
+const router = useRouter()
 
 
-import SignupValidations from '../../services/SignupValidations'
-import { LOADING_SPINNER_SHOW_MUTATION, LOGIN_ACTION } from '../../store/storeconstants';
+const Login = () => {
+        let validations = new SignupValidations(
+          email.value,
+          password.value,
+        );
 
+        errors.value = validations.checkValidations();
+        if (errors.value.length) {
+          return false;
+        }
+        error.value = '';
 
-export default{
+     const   url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=
+        AIzaSyBxGt8MN7aI3Ouv3_WT3aMPcmmPe-Goscs`
 
-  data() {
-    return {
-      email: '',
-      password: '',
-      errors: [],
-      error: ''
+      axios.post(url, { "email": email.value, "password": password.value })
+      .then(response => { 
+      if (response.status === 200) {
+        let tokenData = {
+          email: response.data.email,
+          token: response.data.idToken,
+          expiresIn: response.data.expiresIn,
+          refresToken: response.data.refreshToken,
+          userId: response.data.localId
+        }
+        localStorage.setItem('userData', JSON.stringify(tokenData))
+      }else{
+        console.log(response.status)
+      }
+      })
+      .catch((error) => { 
+        console.log('Error')
+      })
+     
 
+       router.push('/dashboard')
     }
-  },
 
-  methods: {
-
-    ...mapActions('auth', {
-      login: LOGIN_ACTION
-    }),
-    ...mapMutations({
-      showLoading: LOADING_SPINNER_SHOW_MUTATION,
-    }),
-    async Login() {
-      let validations = new SignupValidations(
-        this.email,
-        this.password,
-      );
-
-      this.errors = validations.checkValidations();
-      if (this.errors.length) {
-        return false;
-      }
-      this.error = '';
-
-      this.showLoading(true);
-      //Login check
-      try {
-        await this.login({
-          email: this.email,
-          password: this.password,
-        });
-      } catch (e) {
-        this.error = e;
-        this.showLoading(false);
-      }
-      this.showLoading(false);
-
-     this.$router.push('/dashboard')
-    },
-
-  }
+  
 
 
-}
+// export default{
+
+//   data() {
+//     return {
+//       email: '',
+//       password: '',
+//       errors: [],
+//       error: ''
+
+//     }
+//   },
+
+//   methods: {
+
+//     ...mapActions('auth', {
+//       login: LOGIN_ACTION
+//     }),
+//     ...mapMutations({
+//       showLoading: LOADING_SPINNER_SHOW_MUTATION,
+//     }),
+//     async Login() {
+//       let validations = new SignupValidations(
+//         this.email,
+//         this.password,
+//       );
+
+//       this.errors = validations.checkValidations();
+//       if (this.errors.length) {
+//         return false;
+//       }
+//       this.error = '';
+
+//       this.showLoading(true);
+//       //Login check
+//       try {
+//         await this.login({
+//           email: this.email,
+//           password: this.password,
+//         });
+//       } catch (e) {
+//         this.error = e;
+//         this.showLoading(false);
+//       }
+//       this.showLoading(false);
+
+//      this.$router.push('/dashboard')
+//     },
+
+//   }
+
+
+// }
 </script>
 <style scoped>
   .nav{

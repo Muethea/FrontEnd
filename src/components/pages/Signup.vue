@@ -75,7 +75,7 @@
                     </button>
                     <div>
 
-                      <router-link to="/login" class="create">Don't have an acoount</router-link>
+                      <router-link to="/login" class="create">Do you have an account?</router-link>
                     </div>
                   </div>
 
