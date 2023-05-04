@@ -123,58 +123,6 @@ const Login = () => {
   
 
 
-// export default{
-
-//   data() {
-//     return {
-//       email: '',
-//       password: '',
-//       errors: [],
-//       error: ''
-
-//     }
-//   },
-
-//   methods: {
-
-//     ...mapActions('auth', {
-//       login: LOGIN_ACTION
-//     }),
-//     ...mapMutations({
-//       showLoading: LOADING_SPINNER_SHOW_MUTATION,
-//     }),
-//     async Login() {
-//       let validations = new SignupValidations(
-//         this.email,
-//         this.password,
-//       );
-
-//       this.errors = validations.checkValidations();
-//       if (this.errors.length) {
-//         return false;
-//       }
-//       this.error = '';
-
-//       this.showLoading(true);
-//       //Login check
-//       try {
-//         await this.login({
-//           email: this.email,
-//           password: this.password,
-//         });
-//       } catch (e) {
-//         this.error = e;
-//         this.showLoading(false);
-//       }
-//       this.showLoading(false);
-
-//      this.$router.push('/dashboard')
-//     },
-
-//   }
-
-
-// }
 </script>
 <style scoped>
   .nav{
