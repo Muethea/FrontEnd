@@ -21,21 +21,21 @@ export default {
     localStorage.removeItem('userData')
   },
 
-  async [LOGIN_ACTION](context, payload) {
-    return context.dispatch(AUTH_ACTION, {
-      ...payload,
-      url: `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=
-        AIzaSyBxGt8MN7aI3Ouv3_WT3aMPcmmPe-Goscs`
-    })
-  },
+  // async [LOGIN_ACTION](context, payload) {
+  //   return context.dispatch(AUTH_ACTION, {
+  //     ...payload,
+  //     url: `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=
+  //       AIzaSyBxGt8MN7aI3Ouv3_WT3aMPcmmPe-Goscs`
+  //   })
+  // },
 
-  async [SIGNUP_ACTION](context, payload) {
-    return context.dispatch(AUTH_ACTION, {
-      ...payload,
-      url: `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=
-        AIzaSyBxGt8MN7aI3Ouv3_WT3aMPcmmPe-Goscs`
-    })
-  },
+  // async [SIGNUP_ACTION](context, payload) {
+  //   return context.dispatch(AUTH_ACTION, {
+  //     ...payload,
+  //     url: `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=
+  //       AIzaSyBxGt8MN7aI3Ouv3_WT3aMPcmmPe-Goscs`
+  //   })
+  // },
 
   
     [AUTO_LOGIN_ACTION] (context){

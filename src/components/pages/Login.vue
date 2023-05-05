@@ -26,7 +26,7 @@
 
 
       <div class="card  ">
-        <h2>Login 2</h2>
+        <h2>Login </h2>
         <div class="alert alert-danger" v-if="error">{{ error }}</div>
         <form @submit.prevent="Login">
           <!-- Email input -->
@@ -94,8 +94,14 @@ const Login = () => {
         }
         error.value = '';
 
-     const   url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=
-        AIzaSyBxGt8MN7aI3Ouv3_WT3aMPcmmPe-Goscs`
+        /*
+        https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=
+        AIzaSyBxGt8MN7aI3Ouv3_WT3aMPcmmPe-Goscs
+         url:http://mz.nsdevil.com/cwb/api/auth/login
+         
+        */
+
+     const   url = ` http://mz.nsdevil.com/cwb/api/auth/login`
 
       axios.post(url, { "email": email.value, "password": password.value })
       .then(response => { 
@@ -124,6 +130,8 @@ const Login = () => {
 
 
 </script>
+
+
 <style scoped>
   .nav{
     display: none;
