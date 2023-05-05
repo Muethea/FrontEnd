@@ -1,57 +1,46 @@
 <template>
-    <div>
+   
  <Nav/>
-
+     <div class="back">
  <header class="container">
 
+    <div class="layouts">
             <div class="card1">
          <router-link to="whiteboard" class="link">
                <font-awesome-icon icon="fa-solid fa-plus" size="2xl" />
                <h5>Create new  </h5>
                  </router-link>
             </div>
-      
- 
-     
- </header>
+            <div class="recentopen">
+                <small>Recently opened </small>
+                   <div class="card2">
 
- <main >
-     
-      <div class="back">
-         <div class="recent ">
-            
-            <div class="recent-selec">
-                <h5>Recent boards</h5>
-
-            
-                <div class="opnios">
-                <select id="select" boards name="select" class="select-input">
-                <option value="">Last opened</option>
-              <option value="">Last modified</option>
-             <option value="">Alphabetically</option>
-                </select>
+                    <div class="card-body">
+                        <div class="name">
+                            <div class="card-title">
+                                <small>Untitled</small>
+                        </div>
+                        </div>
+                        <div class="img">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
+                            <small>Modified 11 days ago</small>
+                        </div>
+            <p class="card-text"></p>
+            </div>
                 </div>
-      
+                  <div class="card2">
 
-            
-
+                    <div class="card-title">
+                        
+                    </div>
+                        <p>untitled</p>
+                        <small>Modified 11 days ago</small>
+                    </div>
             </div>
-     
-           <div class="card-group">
-             <div  v-for="titles in dashboard" :key="titles.id">
-               <div class="card">
-                 <div class="card-body">
-                 </div>
-                 <div class="card-footer">
-                  <h5 class="card-title">{{ titles.title }} </h5>
-                 </div>
-               </div>
-              </div>
+         
+                
             </div>
-              
-         </div>
-       </div>
- </main>
+ </header>
 
 </div>
 </template>
@@ -98,6 +87,7 @@ export default {
 
 <style scoped>
 .back{
+    height: 100vh;
    padding-bottom: 3rem;
 }
 /* Reset de estilos padrão do select */
@@ -146,6 +136,16 @@ a{
   
 }
 
+.card2, .card3{
+    background: #fff;
+    cursor: pointer;
+    justify-content: space-between;
+     margin-top: 3rem;
+    cursor: pointer;
+     width: 24rem;
+    height: 14rem;
+}
+
 .card1{
     display: flex;
     flex-direction: column;
@@ -179,12 +179,12 @@ a{
     margin-top: 3rem;
     width: 100%;
     height: 100%;
-    max-width: 100%;
+  
     background: rgb(255, 255, 255);
 }
 
 
-.card div:hover, .card1:hover{
+.card2:hover{
         background-color: white;
     box-shadow: 0 10px 40px rgba(0,0,0,.2);
     transition: box-shadow 0.5s ease-in-out;
@@ -209,9 +209,7 @@ a{
     border-radius: 6px;
     cursor: pointer;
     margin-top: 3rem;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
+
     background: rgb(255, 255, 255);
 }
 
@@ -236,7 +234,7 @@ a{
     margin-top: 3rem;
     width: 100%;
     height: 100%;
-    max-width: 100%;
+
 
 }
 
@@ -304,6 +302,44 @@ a{
 
 @media only screen and (min-width: 992px) {
  
+    
+    .card-title small{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .card-title{
+        border-top: 1px solid #55555510;
+        margin-top: 8rem;
+        margin-bottom: .4rem;
+    }
+
+    .img{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+         
+    }
+
+    .img small{
+        font-size: 12px;
+        color: #737373;
+    }
+    .img img{
+      
+        width: 2rem;
+        clip-path: circle();
+    }
+    .recentopen{
+        margin-top: 4rem;
+        display: flex;
+        gap: 2rem;
+    }
+    .layouts{
+        max-width: 100vw;
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+    }
     .container{
         margin-left: 2rem;
         margin-right: 2rem;
@@ -313,38 +349,21 @@ a{
 }
 
 
-.recent{
-    margin-top: 10rem 5rem;
-}
-
-.card-group{
-    display: flex;
-    gap: 3rem;
-}
-
-
-.card{
-    border: 1px solid #E5E5E5;
-    border-radius: 6px;
+.card2, .card3{
+    background: #fff;
     cursor: pointer;
-    margin-top: 3rem;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    background: rgb(255, 255, 255);
+    justify-content: space-between;
+     margin-top: 3rem;
+    cursor: pointer;
+     width: 24rem;
+    height: 16rem;
+    padding: 2rem;
 }
 
+.recent{
+    margin:10rem 5rem
+}
 
-.card div:hover, .card1:hover{
-        background-color: white;
-    box-shadow: 0 10px 40px rgba(0,0,0,.2);
-    transition: box-shadow 0.5s ease-in-out;
-}
-.card, .card1{
-    width: 20rem;
-    height: 20rem;
-   
-}
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */

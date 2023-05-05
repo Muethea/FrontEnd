@@ -130,9 +130,7 @@ const Login = () => {
 
 
 <style scoped>
-  .nav{
-    display: none;
-  }
+
 
 .card h2 {
   color: #000000;
