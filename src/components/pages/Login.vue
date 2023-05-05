@@ -23,8 +23,6 @@
       </div>
     </div>
     <div class="loginform container ">
-
-
       <div class="card  ">
         <h2>Login </h2>
         <div class="alert alert-danger" v-if="error">{{ error }}</div>
