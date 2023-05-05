@@ -2,8 +2,6 @@
   <main>
   
     <div class="back">
-
-
       <div class="card2">
         <div class="pont"></div>
         <p>Connect with your creativity </p>
@@ -99,7 +97,8 @@ const Login = () => {
          
         */
 
-     const   url = ` http://mz.nsdevil.com/cwb/api/auth/login`
+     const   url = `   https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=
+        AIzaSyBxGt8MN7aI3Ouv3_WT3aMPcmmPe-Goscs`
 
       axios.post(url, { "email": email.value, "password": password.value })
       .then(response => { 

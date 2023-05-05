@@ -11,11 +11,11 @@
             <router-link class="nav-link active" aria-current="page" v-if="isAuthenticated" to="/">Home</router-link>
           
           </li>
-          <li class="nav-item" >
-            <router-link v-if="isAuthenticated"   class="nav-link" to="/login">Login</router-link>
+          <li class="nav-item item"  >
+            <router-link v-if="!isAuthenticated"   class="nav-link" to="/login">Login</router-link>
           </li>
-          <li class="nav-item">
-              <router-link v-if="isAuthenticated"  class="nav-link" to="/sigunp">Sigunp</router-link>
+          <li class="nav-item item">
+              <router-link v-if="!isAuthenticated"  class="nav-link" to="/sigunp">Sigunp</router-link>
             </li>
                 <li class="nav-item">
                 <router-link v-if="isAuthenticated" class="nav-link" to="/dashboard">Dashboard</router-link>
@@ -61,5 +61,12 @@ export default {
 </script>
 
 <style>
+
+
+  .item{
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+  }
 
 </style>
