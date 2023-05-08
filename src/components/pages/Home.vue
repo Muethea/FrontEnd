@@ -757,12 +757,11 @@ button:nth-child(1) {
   }
 
   nav {
-    height: 7rem;
-    display: flex;
+       display: flex;
     justify-content: space-between;
     align-items: center;
     background: #ffffff;
-    box-shadow: 0px 5px 14px rgba(20, 20, 43, 0.05);
+    
   }
 
   .home {
@@ -930,12 +929,12 @@ button:nth-child(1) {
   }
 
   nav {
-    height: 7rem;
+   
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #ffffff;
-    box-shadow: 0px 5px 14px rgba(20, 20, 43, 0.05);
+ 
   }
 
   .home {
@@ -1104,12 +1103,12 @@ button:nth-child(1) {
   }
 
   nav {
-    height: 7rem;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #ffffff;
-    box-shadow: 0px 5px 14px rgba(20, 20, 43, 0.05);
+   
   }
 
   .home {
@@ -1279,7 +1278,7 @@ button:nth-child(1) {
   }
 
   nav {
-    height: 7rem;
+
     display: flex;
     justify-content: space-between;
     align-items: center;

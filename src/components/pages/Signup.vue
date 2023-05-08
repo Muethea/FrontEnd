@@ -92,67 +92,66 @@
   </main>
 </template>
 
-<script>
+<script setup>
+
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 import SignupValidations from '../../services/SignupValidations';
-import { mapActions, mapMutations } from 'vuex';
-import { LOADING_SPINNER_SHOW_MUTATION, SIGNUP_ACTION } from '../../store/storeconstants';
+import axios from 'axios';
 
-export default{
-  data() {
-    return {
-      fullname: '',
-      email: '',
-      password: '',
-      errors: [],
-      error: ''
+const email = ref('')
+
+const password = ref('');
+const errors = ref([]);
+const error = ref('');
+const router = useRouter()
 
 
-    }
-  },
-
-  methods: {
-
-    ...mapActions('auth',{
-
-      signup: SIGNUP_ACTION
-
-    }),
-
-    ...mapMutations({
-
-     showLoading: LOADING_SPINNER_SHOW_MUTATION
-    }),
-
- async    Signup(){
+const   Signup =() =>{
       let validations = new SignupValidations(
-        this.email,
-        this.password
+        email.value,
+        password.value,
       );
 
-      this.errors = validations.checkValidations();
-      if ('email' in this.errors || 'password' in this.errors) {
+
+        errors.value = validations.checkValidations();
+      if ('email' in errors.value || 'password' in errors.value) {
 
         return false
         
       }
 
-      this.showLoading(true)
+      /*URL FIREBASE: https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=
+  AIzaSyBxGt8MN7aI3Ouv3_WT3aMPcmmPe-Goscs*/
 
-     await   this.signup({
-          email: this.email, password: this.password
-        }).catch(error =>{
-          this.error = error
-             this.showLoading(false)
-        });
+      const url = `http://mz.nsdevil.com/cwb/api/v1/user`
 
-      this.showLoading(false)
-
-    }
-
-
-  }
-
+  axios.post(url, { "email": email.value, "password": password.value })
+    .then(response => {
+      if (response.status === 200) {
+        let tokenData = {
+          email: response.data.email,
+          token: response.data.idToken,
+          expiresIn: response.data.expiresIn,
+          refresToken: response.data.refreshToken,
+          userId: response.data.localId
+        }
+        localStorage.setItem('userData', JSON.stringify(tokenData))
+      } else {
+        console.log(response.status)
+      }
+    })
+    .catch((error) => {
+      console.log('Error')
+    })
 }
+
+      
+
+
+  
+
+
 </script>
 <style scoped>
 .btns {

@@ -2,8 +2,6 @@
   <main>
   
     <div class="back">
-
-
       <div class="card2">
         <div class="pont"></div>
         <p>Connect with your creativity </p>
@@ -23,10 +21,8 @@
       </div>
     </div>
     <div class="loginform container ">
-
-
       <div class="card  ">
-        <h2>Login 2</h2>
+        <h2>Login </h2>
         <div class="alert alert-danger" v-if="error">{{ error }}</div>
         <form @submit.prevent="Login">
           <!-- Email input -->
@@ -94,7 +90,14 @@ const Login = () => {
         }
         error.value = '';
 
-     const   url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=
+        /*
+        https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=
+        AIzaSyBxGt8MN7aI3Ouv3_WT3aMPcmmPe-Goscs
+         url:http://mz.nsdevil.com/cwb/api/auth/login
+         
+        */
+
+     const   url = `   https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=
         AIzaSyBxGt8MN7aI3Ouv3_WT3aMPcmmPe-Goscs`
 
       axios.post(url, { "email": email.value, "password": password.value })
@@ -124,10 +127,10 @@ const Login = () => {
 
 
 </script>
+
+
 <style scoped>
-  .nav{
-    display: none;
-  }
+
 
 .card h2 {
   color: #000000;

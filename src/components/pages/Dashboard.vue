@@ -1,71 +1,59 @@
 <template>
-  <div class="opacity-layout">
-    <Nav />
-    <header class="container">
-      <div class="card1">
-        <div class="tainer btn-right" id="blur">
-          <div>
-            <a href="#" @click="toggle()">
-              <font-awesome-icon icon="fa-solid fa-plus" size="2xl" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
-    <main>
-      <div class="back">
-        <div class="recent">
-          <div class="recent-selec">
-            <h5>Recent boards</h5>
+    <div>
+ <Nav/>
 
-            <div class="opnios">
-              <select id="select" boards name="select" class="select-input">
-                <option value="">Last opened</option>
-                <option value="">Last modified</option>
-                <option value="">Alphabetically</option>
-              </select>
+ <header class="container">
+
+            <div class="card1">
+         <router-link to="whiteboard" class="link">
+               <font-awesome-icon icon="fa-solid fa-plus" size="2xl" />
+               <h5>Create new  </h5>
+                 </router-link>
             </div>
-          </div>
+      
+ 
+     
+ </header>
 
-          <div class="card-group">
-            <div v-for="titles in dashboard" :key="titles.id">
-              <div class="card">
-                <div class="card-body"></div>
-                <div class="card-footer">
-                  <h5 class="card-title">{{ titles.title }}</h5>
+ <main >
+     
+      <div class="back">
+         <div class="recent ">
+            
+            <div class="recent-selec">
+                <h5>Recent boards</h5>
+
+            
+                <div class="opnios">
+                <select id="select" boards name="select" class="select-input">
+                <option value="">Last opened</option>
+              <option value="">Last modified</option>
+             <option value="">Alphabetically</option>
+                </select>
                 </div>
+      
+
+            
+
+            </div>
+     
+           <div class="card-group">
+             <div  v-for="titles in dashboard" :key="titles.id">
+               <div class="card">
+                 <div class="card-body">
+                 </div>
+                 <div class="card-footer">
+                  <h5 class="card-title">{{ titles.title }} </h5>
+                 </div>
+               </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </main>
-  </div>
-  <div id="popup" class="popup">
-    <div class="popup-width">
-      <h3>Create new board</h3>
-      <p>Name your team before chossing a new plan subscription</p>
-    </div>
-    <div class="popup-button">
-      <form>
-        <fieldset>
-          <label>Nome</label>
-          <input type="text" placeholder="Enter name of project" />
-        </fieldset>
-        <fieldset>
-          <label>Project</label>
-          <select name="" id="">
-            <option value="privated">privated</option>
-            <option value="privated">public</option>
-          </select>
-        </fieldset>
-      </form>
-      <button type="submit" class="button-btn" id="btn">
-        <router-link to="whiteboard" class="link"> Create </router-link>
-      </button>
-    </div>
-    <a href="#" @click="toggle()" class="close-button" title="close">X</a>
-  </div>
+              
+         </div>
+       </div>
+ </main>
+
+</div>
 </template>
 
 <script>
@@ -122,120 +110,8 @@ export default {
 </script>
 
 <style scoped>
-form {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-fieldset {
-  margin: 10px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-input[type="text"]:focus {
-  outline: none;
-  border-color: #555;
-}
-
-select {
-  width: 30%;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 1px solid #000;
-  border-radius: 4px;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23666' d='M5 7l3-3 3 3z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 8px center;
-  background-size: 16px 16px;
-}
-
-select:focus {
-  outline: none;
-  border-color: #000;
-}
-
-#popup {
-  background-color: fff;
-  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
-  position: fixed;
-  width: 600px;
-  padding: 80px;
-  border-radius: 20px;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  visibility: visible;
-  transition: 0.5s;
-  opacity: 0;
-  border-radius: 5px;
-}
-
-#popup.active {
-  top: 50%;
-  visibility: visible;
-  opacity: 1;
-  transition: 0.6s;
-}
-
-.popup-width {
-  width: 350px;
-}
-
-.button-btn {
-  width: 100%;
-  margin-top: 16px;
-  padding: 16px;
-  border: none;
-  background-color: #5d5a88;
-  border-radius: 5px;
-  color: #fff;
-  transition: 0.6s;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.button-btn:hover {
-  background-color: #5d5a88aa;
-  color: #fff;
-}
-
-.close-button {
-  background-color: #ffffff;
-  color: #000000;
-  border: none;
-  padding: 12px;
-  font-size: 22px;
-  border-radius: 100%;
-  cursor: pointer;
-
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: 25px;
-  margin-right: 25px;
-  transition: 0.5s;
-}
-
-.btn-right {
-  position: relative;
-}
-
-.back {
-  padding-bottom: 3rem;
+.back{
+   padding-bottom: 3rem;
 }
 
 /* Reset de estilos padrão do select */
@@ -282,6 +158,16 @@ a {
   background-color: #f8faf9;
 }
 
+.card2, .card3{
+    background: #fff;
+    cursor: pointer;
+    justify-content: space-between;
+     margin-top: 3rem;
+    cursor: pointer;
+     width: 24rem;
+    height: 14rem;
+}
+
 .card1 {
   display: flex;
   flex-direction: column;
@@ -308,23 +194,22 @@ a {
 .card-group {
   display: flex;
 }
-
-.card {
-  border: 1px solid #e5e5e5;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 3rem;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  background: rgb(255, 255, 255);
+.card{
+    border: 1px solid #E5E5E5;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 3rem;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    background: rgb(255, 255, 255);
 }
 
-.card div:hover,
-.card1:hover {
-  background-color: white;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.5s ease-in-out;
+
+.card div:hover, .card1:hover{
+        background-color: white;
+    box-shadow: 0 10px 40px rgba(0,0,0,.2);
+    transition: box-shadow 0.5s ease-in-out;
 }
 
 /* Mobile phones */
@@ -345,9 +230,7 @@ a {
     border-radius: 6px;
     cursor: pointer;
     margin-top: 3rem;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
+
     background: rgb(255, 255, 255);
   }
 }
@@ -368,7 +251,8 @@ a {
     width: 100%;
     height: 100%;
     max-width: 100%;
-  }
+
+}
 
   .recent {
     margin: 10rem 5rem;
@@ -431,26 +315,28 @@ a {
 }
 
 @media only screen and (min-width: 992px) {
-  .container {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
+ 
+    .container{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .card1{
+     margin-top: 3rem;
+}
 
-  .card1 {
-    margin-top: 3rem;
-  }
 
-  .recent {
+.recent{
     margin-top: 10rem 5rem;
-  }
+}
 
-  .card-group {
+.card-group{
     display: flex;
     gap: 3rem;
-  }
+}
 
-  .card {
-    border: 1px solid #e5e5e5;
+
+.card{
+    border: 1px solid #E5E5E5;
     border-radius: 6px;
     cursor: pointer;
     margin-top: 3rem;
@@ -458,20 +344,19 @@ a {
     height: 100%;
     max-width: 100%;
     background: rgb(255, 255, 255);
-  }
+}
 
-  .card div:hover,
-  .card1:hover {
-    background-color: white;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+
+.card div:hover, .card1:hover{
+        background-color: white;
+    box-shadow: 0 10px 40px rgba(0,0,0,.2);
     transition: box-shadow 0.5s ease-in-out;
-  }
-
-  .card,
-  .card1 {
+}
+.card, .card1{
     width: 20rem;
     height: 20rem;
-  }
+   
+}
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
