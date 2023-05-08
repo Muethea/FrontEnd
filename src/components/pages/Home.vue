@@ -8,26 +8,7 @@
         <button id="btn" class="btnget">
           <router-link to="/sigunp"> Get started</router-link>
         </button>
-        <div class="lucas">
-          <font-awesome-icon
-            icon="fa-solid fa-arrow-pointer"
-            size="xl"
-            style="color: #1d0887"
-          />
-          <span>Lucas</span>
-        </div>
-
-        <div class="fernando">
-          <div class="note"></div>
-          <font-awesome-icon
-            icon="fa-solid fa-arrow-pointer"
-            size="xl"
-            style="color: #fe2"
-          />
-          <span>Fernando</span>
-        </div>
       </section>
-
       <section class="cards">
         <div class="card"></div>
         <div class="card2"></div>
@@ -200,37 +181,7 @@ footer {
   margin: 0 80px;
 }
 
-.lucas {
-  position: absolute;
-  top: 23rem;
-  left: 12rem;
-  animation: move 5s infinite;
-  transition: right 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
 
-.fernando {
-  position: absolute;
-  top: 13rem;
-  left: 82rem;
-}
-
-.fernando span {
-  position: relative;
-  top: 1rem;
-  padding: 0.2rem 0.4rem;
-  color: #ffffff;
-  background: rgb(211, 194, 8);
-}
-
-.lucas span {
-  padding: 0.2rem 0.4rem;
-  position: relative;
-  top: 1rem;
-  font-weight: 500;
-
-  color: #ffffff;
-  background: #5d5a88;
-}
 
 main {
   padding-bottom: 8rem;
@@ -669,37 +620,6 @@ button:nth-child(1) {
     margin: 0 80px;
   }
 
-  .lucas {
-    position: absolute;
-    top: 23rem;
-    left: 12rem;
-    animation: move 5s infinite;
-    transition: right 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
-
-  .fernando {
-    position: absolute;
-    top: 13rem;
-    left: 42rem;
-  }
-
-  .fernando span {
-    position: relative;
-    top: 1rem;
-    padding: 0.2rem 0.4rem;
-    color: #ffffff;
-    background: rgb(211, 194, 8);
-  }
-
-  .lucas span {
-    padding: 0.2rem 0.4rem;
-    position: relative;
-    top: 1rem;
-    font-weight: 500;
-
-    color: #ffffff;
-    background: #5d5a88;
-  }
 
   main {
     padding-bottom: 8rem;
