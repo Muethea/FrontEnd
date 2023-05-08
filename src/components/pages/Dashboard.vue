@@ -11,6 +11,7 @@
           </div>
         </div>
       </div>
+      <Methodcard />
     </header>
     <main>
       <div class="back">
@@ -76,6 +77,7 @@ import {
   LOADING_SPINNER_SHOW_MUTATION,
 } from "../../store/storeconstants";
 import Nav from "../Navbar/Nav.vue";
+import Methodcard from "./Methoscard.vue";
 
 
 export default {
@@ -118,7 +120,7 @@ export default {
       popup.classList.toggle("active");
     },
   },
-  components: { Nav},
+  components: { Nav, Methodcard},
 };
 </script>
 
@@ -351,6 +353,11 @@ a {
     max-width: 100%;
     background: rgb(255, 255, 255);
   }
+} 
+
+.container {
+  display: flex;
+  gap: 22px;
 }
 
 /* Tablets */
