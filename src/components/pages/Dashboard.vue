@@ -49,7 +49,7 @@
     <div class="popup-button">
       <form>
         <fieldset>
-          <label>Nome</label>
+          <label>Name</label>
           <input type="text" placeholder="Enter name of project" />
         </fieldset>
         <fieldset>
