@@ -12,7 +12,6 @@
         </div>
       </div>
     </header>
-
     <main>
       <div class="back">
         <div class="recent">
@@ -54,15 +53,13 @@
           <input type="text" placeholder="Enter name of project" />
         </fieldset>
         <fieldset>
-          <label>Type of Project</label>
+          <label>Project</label>
           <select name="" id="">
-            <option value="privated">chose</option>
             <option value="privated">privated</option>
             <option value="privated">public</option>
           </select>
         </fieldset>
       </form>
-
       <button type="submit" class="button-btn" id="btn">
         <router-link to="whiteboard" class="link"> Create </router-link>
       </button>
@@ -120,7 +117,7 @@ export default {
       popup.classList.toggle("active");
     },
   },
-  components: { Nav },
+  components: { Nav},
 };
 </script>
 
@@ -133,7 +130,6 @@ form {
 
 fieldset {
   margin: 10px;
-  display: inline-block;
 }
 
 label {
@@ -142,12 +138,34 @@ label {
 }
 
 input[type="text"] {
-  width: 70%;
+  width: 100%;
   padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #555;
+}
+
 select {
-  width: 10%;
-  
+  width: 30%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  border-radius: 4px;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23666' d='M5 7l3-3 3 3z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 16px 16px;
+}
+
+select:focus {
+  outline: none;
+  border-color: #000;
 }
 
 #popup {
