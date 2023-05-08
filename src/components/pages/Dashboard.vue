@@ -14,7 +14,6 @@
             <div class="recentopen">
                 <small>Recently opened </small>
                    <div class="card2">
-
                     <div class="card-body">
                         <div class="name">
                             <div class="card-title">
@@ -28,6 +27,7 @@
             <p class="card-text"></p>
             </div>
                 </div>
+                
                   <div class="card2">
 
                     <div class="card-title">
@@ -335,8 +335,9 @@ a{
         gap: 2rem;
     }
     .layouts{
-        max-width: 100vw;
+       
         display: flex;
+        justify-content: space-between;
         align-items: center;
         gap: 5rem;
     }
