@@ -89,6 +89,7 @@ export default {
 a {
   color: #ffffff;
 }
+
 #popup {
   position: fixed;
   top: 40%;
@@ -143,14 +144,12 @@ a {
   background-color: #5d5a88aa;
   color: #fff;
 }
-
 .close-button {
   background-color: #ffffff;
   color: #000000;
   border: none;
   padding: 12px;
-  font-size: 26px;
-  font-weight: bold;
+  font-size: 24px;
   border-radius: 100%;
   cursor: pointer;
 
