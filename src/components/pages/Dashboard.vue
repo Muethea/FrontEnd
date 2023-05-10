@@ -5,9 +5,7 @@
       <div class="card1">
         <div class="tainer btn-right" id="blur">
           <div>
-            <a href="#" @click="toggle()">
-              <font-awesome-icon icon="fa-solid fa-plus" size="2xl" />
-            </a>
+            <Popup/>
           </div>
         </div>
       </div>
@@ -42,31 +40,7 @@
       </div>
     </main>
   </div>
-  <div id="popup" class="popup">
-    <div class="popup-width">
-      <h3>Create new board</h3>
-      <p>Name your team before chossing a new plan subscription</p>
-    </div>
-    <div class="popup-button">
-      <form>
-        <fieldset>
-          <label>Name</label>
-          <input type="text" placeholder="Enter name of project" />
-        </fieldset>
-        <fieldset>
-          <label>Project</label>
-          <select name="" id="">
-            <option value="privated">privated</option>
-            <option value="privated">public</option>
-          </select>
-        </fieldset>
-      </form>
-      <button type="submit" class="button-btn" id="btn">
-        <router-link to="whiteboard" class="link"> Create </router-link>
-      </button>
-    </div>
-    <a href="#" @click="toggle()" class="close-button" title="close">X</a>
-  </div>
+  
 </template>
 
 <script>
@@ -78,6 +52,7 @@ import {
 } from "../../store/storeconstants";
 import Nav from "../Navbar/Nav.vue";
 import Methodcard from "./Methoscard.vue";
+import Popup from "./Popup.vue";
 
 
 export default {
@@ -111,132 +86,13 @@ export default {
       for (let key in dashboard) {
         this.dashboard.push({ ...dashboard[key], id: key });
       }
-    },
-    toggle() {
-      var blur = document.getElementById("blur");
-      blur.classList.toggle("active");
-
-      var popup = document.getElementById("popup");
-      popup.classList.toggle("active");
-    },
+    }
   },
-  components: { Nav, Methodcard},
+  components: { Nav, Methodcard, Popup},
 };
 </script>
 
 <style scoped>
-form {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-fieldset {
-  margin: 10px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-input[type="text"]:focus {
-  outline: none;
-  border-color: #555;
-}
-
-select {
-  width: 30%;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 1px solid #000;
-  border-radius: 4px;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23666' d='M5 7l3-3 3 3z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 8px center;
-  background-size: 16px 16px;
-}
-
-select:focus {
-  outline: none;
-  border-color: #000;
-}
-
-#popup {
-  background-color: fff;
-  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
-  position: fixed;
-  width: 600px;
-  padding: 80px;
-  border-radius: 20px;
-  top: 40%;
-  left: 50%;
-  background: #fff;
-  transform: translate(-50%, -50%);
-  visibility: visible;
-  transition: 0.5s;
-  opacity: 0;
-  border-radius: 5px;
-}
-
-#popup.active {
-  top: 50%;
-  visibility: visible;
-  opacity: 1;
-  transition: 0.6s;
-}
-
-.popup-width {
-  width: 350px;
-}
-
-.button-btn {
-  width: 100%;
-  margin-top: 16px;
-  padding: 16px;
-  border: none;
-  background-color: #5d5a88;
-  border-radius: 5px;
-  color: #fff;
-  transition: 0.6s;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.button-btn:hover {
-  background-color: #5d5a88aa;
-  color: #fff;
-}
-
-.close-button {
-  color: #000000;
-  border: none;
-  padding: 12px;
-  font-size: 22px;
-  border-radius: 100%;
-  cursor: pointer;
-
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: 25px;
-  margin-right: 25px;
-  transition: 0.5s;
-}
-
-.btn-right {
-  position: relative;
-}
-
 .back {
   padding-bottom: 3rem;
 }
