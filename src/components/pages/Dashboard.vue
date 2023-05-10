@@ -1,6 +1,7 @@
 <template>
   <div class="opacity-layout">
-    <Nav />
+    <Search/>
+    <Logoleft/>
     <header class="container">
       <div class="card1">
         <div class="tainer btn-right" id="blur">
@@ -53,6 +54,8 @@ import {
 import Nav from "../Navbar/Nav.vue";
 import Methodcard from "./Methoscard.vue";
 import Popup from "./Popup.vue";
+import Search from './Search.vue';
+import Logoleft from './Logoleft.vue';
 
 
 export default {
@@ -88,7 +91,7 @@ export default {
       }
     }
   },
-  components: { Nav, Methodcard, Popup},
+  components: { Nav, Methodcard, Popup,Search, Logoleft},
 };
 </script>
 
@@ -213,6 +216,7 @@ a {
 
 .container {
   display: flex;
+  flex-direction: row;
   gap: 22px;
 }
 
