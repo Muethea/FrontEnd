@@ -3,17 +3,60 @@
     <Nav />
     <main>
       <section class="section1">
-        <div class="note"></div>
-        <div class="wellcome">
+        <div class="top-right">
+          <div class="perf">
+            <div class="nota nota3"></div>
+             <small>Alexandre I. Amado</small>
+          </div>
+          
 
-          <h2>Welcome to collaborative whiteboard app</h2>
-
-          <button id="btn" class="btnget">
-            <router-link to="/sigunp"> Get started</router-link>
-          </button>
+           <div class="midia">
+            <font-awesome-icon icon="fa-solid fa-phone" />
+           <font-awesome-icon icon="fa-solid fa-video" />
+           <font-awesome-icon icon="fa-solid fa-share" />
+           </div>
         </div>
-      </section>
+        <div class="tool">
 
+          <font-awesome-icon icon="fa-solid fa-arrow-pointer" size="xl" />
+
+        <font-awesome-icon icon="fa-solid fa-pen-nib" rotation={90} size="xl" />
+
+    <font-awesome-icon icon="fa-solid fa-note-sticky" size="xl" />
+
+    <font-awesome-icon icon="fa-solid fa-text" size="xl"/>
+
+    <font-awesome-icon icon="fa-solid fa-shapes" size="xl"/>
+  <font-awesome-icon icon="fa-solid fa-square-plus" size="xl" />
+
+    <font-awesome-icon icon="fa-solid fa-upload" size="xl" />
+
+
+        </div>
+        <div class="wellcome">
+            <div class="text">
+
+              <h2>Welcome to collaborative whiteboard app</h2>
+            </div>
+
+            <div class="botoes">
+          <button  class="start">
+              <router-link to="/sigunp"> Get Start</router-link>
+            </button>
+             <button  class=" watch">
+                <router-link to="#"> Watch the Video <font-awesome-icon icon="fa-solid fa-circle-play" size="xl"/>
+                </router-link>
+              </button>
+            </div>
+        
+        </div>
+       
+      </section>
+   <div class="notas">
+            <div class="nota nota1"></div>
+            <div class="nota nota2"></div>
+            <div class="nota nota3"></div>
+                  </div>
     </main>
     <section class="ideas section2 container">
       <div class="infinito">
@@ -149,9 +192,32 @@ export default {
 };
 </script>
 
-<style scoped>  .collabor {
+<style scoped>  
+
+.watch{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 18px 34px;
+      gap: 8px;
+        background: none;
+
+      border-radius: 10px;
+      border: none;
+}
+
+.watch a{
+      color: #5d5a88;
+
+      font-size: 20px;
+      font-weight: 600;
+}
+.collabor {
     background: #ededed;
   }
+
+
 
   .rigth img {
     width: 23rem;
@@ -891,6 +957,46 @@ export default {
   }
 
   @media only screen and (min-width: 992px) {
+
+    .botoes{
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+.botoes .start{
+     display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+       padding: 18px 34px;
+      gap: 8px;
+      width: 13rem;
+      background: #5d5a88;
+    }
+    .wellcome{
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      gap: 3rem;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .wellcome h2{
+      width: 60rem;
+      margin: 0 auto;
+      font-size: 4.3rem;
+      color: #000000;
+    }
+
+    .wellcome .btnget{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      width: 13rem;
+    }
     .btn .creacte {
       margin-left: 14rem;
     }
@@ -1313,6 +1419,104 @@ export default {
 
   @media (min-width: 1400px) {
 
+    .top-right{
+          display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-top: 2rem;
+      gap: 2rem;
+      background: #ffffff;
+      top: 4rem;
+      right:.3rem;
+      width: 22rem;
+      height: 4rem;
+      border-radius: 1rem;
+       box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+      position: absolute;
+    }
+
+    .top-right .nota3{
+      margin-top: -2rem;
+      margin-left: 1rem;
+      width: 2.3rem;
+      height: 2.3rem;
+ 
+    }
+
+    .top-right .perf{
+      display: flex;
+      align-items: center;
+    }
+    
+    .top-right small{
+           margin-top: -2rem;
+      margin-left: 1rem;
+      font-weight: 500;
+    }
+
+    .top-right .midia{
+      margin-top: -2rem;
+      display: flex;
+      gap: 1rem;
+    }
+ 
+    .notas{
+    margin-top: 18rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+     
+      
+    }
+
+    .nota{
+      width: 3rem;
+      height: 3rem;
+       box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+      background: rgb(191, 191, 191);
+      border-radius: .7rem;
+    
+    }
+
+  .nota1{
+    background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80');
+
+    background-repeat: none;
+    background-size: cover;
+  }
+
+  .nota2{
+    background-image: url('https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2080&q=80');
+
+    background-repeat: none;
+    background-size: cover;
+  }
+
+  .nota3{
+    background-image: url('https://avatars.githubusercontent.com/u/46411490?v=4');
+
+    background-repeat: none;
+    background-size: cover;
+  }
+    .tool{
+      display: flex;
+      flex-direction: column;
+      padding-top: 2rem;
+      gap: 3rem;
+      background: #ffffff;
+      top: 15rem;
+      left:.3rem;
+      width: 4rem;
+      height: 30rem;
+      border-radius: 1rem;
+       box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+      position: absolute;
+    }
+
+    .botoes .start{
+       padding: 30px ;
+    }
+
     .note {
       position: absolute;
     }
@@ -1340,7 +1544,7 @@ export default {
 
 
     main {
-      padding-bottom: 20rem;
+      padding-bottom: 10rem;
       background: #f9f9ff;
       background-image: radial-gradient(circle, #00000046 1px, transparent 1.5px);
       background-size: 25px 25px;

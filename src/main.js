@@ -9,9 +9,43 @@ import {
   faUsers,
   faInfinity,
   faLightbulb,
-  faComments
+  faComments,
+  faCirclePlay,
+  faArrowPointer,
+  faPenNib,
+  faNoteSticky,
+  faShapes,
+  faUpload,
+  faSquare,
+  faSquarePlus,
+  faPhone,
+  faVideo,
+  faShare,
+  
 } from '@fortawesome/free-solid-svg-icons'
-library.add(faUsers, faInfinity, faLightbulb, faComments)
+
+import{
+
+
+  
+  
+} from '@fortawesome/free-regular-svg-icons'
+library.add(
+  faUsers,
+  faInfinity,
+  faLightbulb,
+  faComments,
+  faCirclePlay,
+  faArrowPointer,
+  faPenNib,
+  faNoteSticky,
+  faShapes,
+  faUpload,
+  faSquarePlus,
+  faPhone,
+  faVideo,
+  faShare
+)
 
 const app = createApp(App)
 app.use(router)
