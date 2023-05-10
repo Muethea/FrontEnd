@@ -56,13 +56,13 @@
         </div>
       </div>
       <div class="rigth">
-        <img src="../../../public/Collaboration.jpg" alt="">
+        <img src="/Collaboration.jpg" alt="">
       </div>
     </section>
     <div class="collabor">
       <section class="ideas  container">
         <div class="rigth">
-          <img src="/Collaboration.jpg" alt="">
+          <img src="/cola.jpg" alt="">
         </div>
         <div class=" text-align">
           <h5> Collaborate anytime, anywhere</h5>
