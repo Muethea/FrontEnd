@@ -34,7 +34,7 @@ nav {
   /* Posicao fixa */
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 0;
 }
 
 .logo {
@@ -50,6 +50,7 @@ nav {
 .nav-right {
   display: flex;
   align-items: center;
+  margin-left: 8rem;
 }
 
 .nav-left ul li {
