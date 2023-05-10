@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="content">
-      <div class="list" id="listhidden">
+      <div class="list" v-if="!showList">
         <ul>
           <li>Share</li>
           <li>Select...</li>
@@ -16,29 +16,35 @@
         <h3>Title</h3>
         <p>last modification</p>
       </div>
-      <div class="dot">
-        <span class="dot-svg" @click="toggle()">
+      <div class="dot" @click="showList = !showList">
+        <span class="dot-svg">
           <img
             src="../../assets/img/dot-menu-more-2-svgrepo-com.svg"
             class="svg-img"
           />
-        </span>
+        </span> 
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => {
+    return {
+        showList: true
+      }
+    }
+};
 </script>
 
 <style scoped>
 .card {
-  /* margin-top: 10px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   border: 1px solid var(--color-border);
-  border-radius: 5px; */ 
+  border-radius: 5px; 
 
 
 } 
@@ -128,19 +134,9 @@ ul li {
   line-height: 22px;
   padding: 5px;
 }
-.list {
+.list { 
   width: 40%;
   transition: 1s;
 } 
-
-#listhidden {
-    opacity: 1;
-    visibility: visible;
-}
-
-#listhidden.active {
-    visibility: visible;
-    transition: 0.6s;
-}
 
 </style>
