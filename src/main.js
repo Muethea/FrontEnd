@@ -5,8 +5,13 @@ import store from './store/store'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faPlus } from '@fortawesome/free-solid-svg-icons'
-library.add(faPlus)
+import {
+  faUsers,
+  faInfinity,
+  faLightbulb,
+  faComments
+} from '@fortawesome/free-solid-svg-icons'
+library.add(faUsers, faInfinity, faLightbulb, faComments)
 
 const app = createApp(App)
 app.use(router)
