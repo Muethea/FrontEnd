@@ -1447,7 +1447,6 @@ export default {
       display: flex;
       align-items: center;
     }
-    
     .top-right small{
            margin-top: -2rem;
       margin-left: 1rem;
