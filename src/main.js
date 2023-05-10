@@ -9,12 +9,9 @@ import {
   faUsers,
   faInfinity,
   faLightbulb,
-  faComments,
-  faSearch,
-  faBell,
-  faUser
+  faComments
 } from '@fortawesome/free-solid-svg-icons'
-library.add(faUsers, faInfinity, faLightbulb, faComments, faSearch,faBell, faUser)
+library.add(faUsers, faInfinity, faLightbulb, faComments)
 
 const app = createApp(App)
 app.use(router)
