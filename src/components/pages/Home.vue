@@ -8,9 +8,7 @@
             <div class="nota nota3"></div>
              <small>Alexandre I. Amado</small>
           </div>
-          
-
-           <div class="midia">
+        <div class="midia">
             <font-awesome-icon icon="fa-solid fa-phone" />
            <font-awesome-icon icon="fa-solid fa-video" />
            <font-awesome-icon icon="fa-solid fa-share" />
