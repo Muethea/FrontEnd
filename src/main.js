@@ -9,6 +9,7 @@ import {
   faUsers,
   faInfinity,
   faLightbulb,
+<<<<<<< HEAD
   faComments,
   faCirclePlay,
   faArrowPointer,
@@ -48,6 +49,18 @@ library.add(
   faShare,
   faCircleXmark
 )
+=======
+  faComments, 
+  faSearch,
+  faUser,
+  faBell,
+  faHome,
+  faLayerGroup,
+  faUserGroup
+
+} from '@fortawesome/free-solid-svg-icons'
+library.add(faUsers, faInfinity, faLightbulb, faComments, faSearch, faUser, faBell, faHome,faLayerGroup,faUserGroup)
+>>>>>>> dc3b733d7febda022d27b4c637d115c251854444
 
 const app = createApp(App)
 app.use(router)
