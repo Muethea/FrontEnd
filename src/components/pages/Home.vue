@@ -44,7 +44,8 @@
               <router-link to="/sigunp"> Get Start</router-link>
             </button>
              <button  class=" watch">
-                <router-link to="#"> Watch the Video <font-awesome-icon icon="fa-solid fa-circle-play" size="xl"/>
+                <router-link to="#"> Watch the Video 
+                  <font-awesome-icon icon="fa-solid fa-circle-play" size="xl"/>
                 </router-link>
               </button>
             </div>
