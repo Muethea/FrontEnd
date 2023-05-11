@@ -130,7 +130,7 @@
             </li>
           </ul>
           <div class="btn">
-            <button type="button" class="btn.btn  creacte">
+            <button type="button" class="btn  creacte">
               Creacte a whiteboard
             </button>
           </div>
@@ -161,7 +161,9 @@
         <router-link to="/sigunp">Sign up for free</router-link>
       </button>
     </div>
-    <a href="#" @click="toggle()" class="close-button" title="close">X</a>
+    <a href="#" @click="toggle()" class="close-button" title="close">
+      <font-awesome-icon icon="fa-solid fa-circle-xmark" />
+    </a>
   </div>
 </template>
 
@@ -194,6 +196,140 @@ export default {
 
 <style scoped>  
 
+.section2{
+  margin-top: 5rem;
+}
+
+
+
+    .top-right{
+       display: none;
+    }
+
+    .top-right .nota3{
+      margin-top: -2rem;
+      margin-left: 1rem;
+      width: 2.3rem;
+      height: 2.3rem;
+ 
+    }
+
+    .top-right .perf{
+      display: flex;
+      align-items: center;
+    }
+    .top-right small{
+           margin-top: -2rem;
+      margin-left: 1rem;
+      font-weight: 500;
+    }
+
+    .top-right .midia{
+      display: none;
+    }
+ 
+    .notas{
+      display: none;
+    }
+
+    .nota{
+      width: 3rem;
+      height: 3rem;
+       box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+      background: rgb(191, 191, 191);
+      border-radius: .7rem;
+    
+    }
+
+  .nota1{
+    background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80');
+
+    background-repeat: none;
+    background-size: cover;
+  }
+
+  .nota2{
+    background-image: url('https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2080&q=80');
+
+    background-repeat: none;
+    background-size: cover;
+  }
+
+  .nota3{
+    background-image: url('https://avatars.githubusercontent.com/u/46411490?v=4');
+
+    background-repeat: none;
+    background-size: cover;
+  }
+    .tool{
+     display: none;
+    }
+
+    .botoes .start{
+       padding: 30px ;
+    }
+ .botoes{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+.botoes .start{
+     display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+       padding: 18px 34px;
+      gap: 8px;
+      width: 13rem;
+      background: #5d5a88;
+    }
+    .wellcome{
+      max-width: 420px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      gap: 3rem;
+      flex-direction: column;
+  
+    }
+
+    .wellcome h2{
+      margin-top: 12rem;
+      width: 60rem;
+      font-size: 1.3rem;
+      color: #000000;
+    }
+
+    .wellcome .btnget{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      width: 13rem;
+    }
+
+ 
+
+    .info-ideas{
+      margin-top: 3rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .info-ideas .info{
+      width: 24rem;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+    }
+
+    .ideas{
+      display: flex;
+      flex-direction: column-reverse;
+    }
 .watch{
       display: flex;
       flex-direction: row;
@@ -206,6 +342,15 @@ export default {
       border-radius: 10px;
       border: none;
 }
+
+
+   .popup-width {
+    width: 220px;
+    font-size: 1.3rem;
+    line-height: 45px;
+    margin-bottom: 24px;
+    font-weight: bold;
+  }
 
 .watch a{
       color: #5d5a88;
@@ -220,7 +365,9 @@ export default {
 
 
   .rigth img {
-    width: 23rem;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 1rem;
   }
 
   .btn .creacte {
@@ -228,11 +375,6 @@ export default {
     color: #fff;
     width: 12rem;
     background: #5d5a88;
-  }
-
-  .video {
-    width: 30rem;
-    height: 25rem;
   }
 
   .opacity-layout#blur.active {
@@ -261,7 +403,7 @@ export default {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 600px;
+    width: 380px;
     padding: 50px;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
     background: #fff;
@@ -279,13 +421,14 @@ export default {
   }
 
   .popup-width {
-    width: 400px;
-    font-size: 1.5rem;
+    width: 250px;
+    font-size: 1.2rem;
     line-height: 45px;
     margin-bottom: 24px;
     font-weight: bold;
   }
 
+ 
   .popup-button {
     display: flex;
     flex-direction: column;
@@ -314,12 +457,12 @@ export default {
   }
 
   .close-button {
-    background-color: #ffffff;
+   
     color: #000000;
     border: none;
     padding: 12px;
     font-size: 24px;
-    border-radius: 100%;
+    border-radius: 50%;
     cursor: pointer;
 
     position: absolute;
@@ -457,6 +600,13 @@ export default {
 
   /* Mobile phones */
   @media only screen and (max-width: 480px) {
+      .popup-width {
+    width: 420px;
+    font-size: 1.3rem;
+    line-height: 45px;
+    margin-bottom: 24px;
+    font-weight: bold;
+  }
 
     /* CSS styles for mobile phones */
     .video {
@@ -480,32 +630,9 @@ export default {
       margin: 0 2rem;
     }
 
-    .lucas {
-      display: none;
-    }
+  
 
-    .fernando {
-      display: none;
-    }
-
-    .fernando span {
-      position: relative;
-      top: 1rem;
-      padding: 0.2rem 0.4rem;
-      color: #ffffff;
-      background: rgb(211, 194, 8);
-    }
-
-    .lucas span {
-      padding: 0.2rem 0.4rem;
-      position: relative;
-      top: 1rem;
-      font-weight: 500;
-
-      color: #ffffff;
-      background: #5d5a88;
-    }
-
+  
     main {
       padding-bottom: 8rem;
       background: #f9f9ff;
@@ -607,6 +734,30 @@ export default {
 
   /* Tablets */
   @media only screen and (min-width: 481px) and (max-width: 768px) {
+
+      #popup {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:460px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    visibility: hidden;
+    transition: 0.5s;
+    opacity: 0;
+    border-radius: 5px;
+  }
+
+      .popup-width {
+    width: 388px;
+    font-size: 1.3rem;
+    line-height: 45px;
+    margin-bottom: 24px;
+    font-weight: bold;
+  }
+
 
     /* CSS styles for tablets */
     .video {
@@ -745,6 +896,28 @@ export default {
 
   /* Laptops and desktops */
   @media only screen and (min-width: 768px) and (max-width: 992px) {
+
+      #popup {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 570px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    visibility: hidden;
+    transition: 0.5s;
+    opacity: 0;
+    border-radius: 5px;
+  }
+    .popup-width {
+    width: 480px;
+    font-size: 1.3rem;
+    line-height: 45px;
+    margin-bottom: 24px;
+    font-weight: bold;
+  }
 
     .section2 .btn .creacte {
       margin-right: 10rem;
@@ -1419,6 +1592,52 @@ export default {
 
   @media (min-width: 1400px) {
 
+
+
+    .info-ideas{
+      display: flex;
+      gap: 1rem;
+    }
+
+    .info-ideas .info{
+      width: 24rem;
+    }
+
+
+    .btn {
+      display: flex;
+      justify-content: center;
+    }
+
+    .ideas{
+      display: flex;
+      flex-direction: row;
+    }
+
+     #popup {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    visibility: hidden;
+    transition: 0.5s;
+    opacity: 0;
+    border-radius: 5px;
+  }
+
+      .popup-width {
+    width: 500px;
+    font-size: 1.3rem;
+    line-height: 45px;
+    margin-bottom: 24px;
+    font-weight: bold;
+  }
+
+
     .top-right{
           display: flex;
       flex-direction: row;
@@ -1559,9 +1778,6 @@ export default {
     }
 
 
-    .video {
-      width: 44rem;
-    }
 
     section h2 {
       width: 400px;

@@ -21,6 +21,7 @@ import {
   faPhone,
   faVideo,
   faShare,
+  faCircleXmark,
   
 } from '@fortawesome/free-solid-svg-icons'
 
@@ -44,7 +45,8 @@ library.add(
   faSquarePlus,
   faPhone,
   faVideo,
-  faShare
+  faShare,
+  faCircleXmark
 )
 
 const app = createApp(App)
