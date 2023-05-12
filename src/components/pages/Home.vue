@@ -102,7 +102,7 @@
       </div>
     </section>
     <div class="collabor">
-      <section class="ideas  container">
+      <section class="ideas section3 container">
         <div class="rigth">
           <img src="/cola.jpg" alt="">
         </div>
@@ -195,8 +195,45 @@ export default {
 
 <style scoped>  
 
+
+    .text-align ul {
+      margin-top: 3rem;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      gap: 1.3rem;
+      width: 22rem;
+    }
+
+    .text-align h5 {
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .alin {
+      text-align: justify;
+    }
+
+    .text-align h5 {
+      text-align: center;
+    }
+
+
+    li {
+      display: flex;
+      font-size: 1rem;
+      gap: 1rem;
+    }
+
+    li span {
+      
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
 .section2{
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 
 
@@ -284,7 +321,7 @@ export default {
       background: #5d5a88;
     }
     .wellcome{
-      max-width: 420px;
+      max-width: 320px;
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -296,7 +333,7 @@ export default {
 
     .wellcome h2{
       margin-top: 12rem;
-      width: 60rem;
+      width: 30rem;
       font-size: 1.3rem;
       color: #000000;
     }
@@ -326,6 +363,7 @@ export default {
     }
 
     .ideas{
+      padding: 2rem;
       display: flex;
       flex-direction: column-reverse;
     }
@@ -358,6 +396,7 @@ export default {
       font-weight: 600;
 }
 .collabor {
+  padding: 4rem 0;
     background: #ededed;
   }
 
@@ -633,7 +672,7 @@ export default {
 
   
     main {
-      padding-bottom: 8rem;
+      
       background: #f9f9ff;
       background-image: radial-gradient(circle, #00000046 5px, transparent 5px);
       background-size: 25px 25px;
@@ -734,6 +773,31 @@ export default {
   /* Tablets */
   @media only screen and (min-width: 481px) and (max-width: 768px) {
 
+  .wellcome{
+      padding: 5rem 0;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      gap: 2rem;
+      
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .wellcome h2{
+      width: 27rem;
+      margin: 0 auto;
+      font-size: 1.6rem;
+      color: #000000;
+    }
+
+
+    .info h3 {
+      font-size: 20px;
+      width: 20rem;
+    }
+
+
       #popup {
     position: fixed;
     top: 40%;
@@ -757,13 +821,6 @@ export default {
     font-weight: bold;
   }
 
-
-    /* CSS styles for tablets */
-    .video {
-      width: 100%;
-      height: 100%;
-    }
-
     .terms {
       position: relative;
       right: 0;
@@ -785,13 +842,6 @@ export default {
       margin: 0 80px;
     }
 
-    .lucas {
-      display: none;
-    }
-
-    .fernando {
-      display: none;
-    }
 
     main {
       padding-bottom: 8rem;
@@ -803,7 +853,6 @@ export default {
 
     .section1 {
       display: flex;
-
       flex-direction: column;
       gap: 2rem;
     }
@@ -888,6 +937,8 @@ export default {
       border: none;
     }
 
+    
+
     .btnsignup {
       color: #ffffff;
     }
@@ -895,6 +946,78 @@ export default {
 
   /* Laptops and desktops */
   @media only screen and (min-width: 768px) and (max-width: 992px) {
+
+      .wellcome{
+      padding: 5rem 0;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      gap: 4rem;
+      
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .wellcome h2{
+      width:30rem;
+      margin: 0 auto;
+      font-size: 2.5rem;
+      color: #000000;
+    }
+
+      .info h3 {
+      font-size: 18px;
+      width: 20rem;
+    }
+
+    .ideas{
+       display: flex;
+       justify-content: center;
+       padding-bottom: 4rem ;
+       padding-left: 3rem;
+       padding-right:3rem ;
+      flex-direction: row;
+    }
+   .infinito {
+      display: flex;
+      padding: 3rem ;
+      gap: 1rem;
+      flex-direction: column;
+    }
+   .info-ideas {
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .ideas {
+      padding: 4rem 0;
+      justify-content: center;
+      gap: 1rem;
+      display: flex;
+      align-items: center;
+    }
+     .botoes{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+    }
+    .watch{
+
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 18px 34px;
+      gap: 2px;
+        background: none;
+      border-radius: 10px;
+      border: none;
+}
+
 
       #popup {
     position: fixed;
@@ -935,7 +1058,7 @@ export default {
 
     .text-align h5 {
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 18px;
     }
 
     .alin {
@@ -963,44 +1086,26 @@ export default {
     }
 
     .collabor {
-      padding: 1rem 0;
+      padding: .4rem ;
     }
 
     .rigth img {
-      width: 25rem;
+      width: 13rem;
+    
     }
 
-    .infinito {
-      display: flex;
-      gap: 3rem;
-      flex-direction: column;
-    }
 
     .info small {
       display: flex;
-      width: 17rem;
+      text-align: justify;
+      width: 12rem;
 
     }
 
     .icon {
-      margin-bottom: 3.3rem;
-
-
+      padding: 1rem;
+      background: #c7c7c741;
     }
-
-    .info-ideas {
-      align-items: center;
-      display: flex;
-      gap: 2rem;
-    }
-
-    .ideas {
-      margin-top: 10rem;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-
     .terms {
       position: relative;
       right: 0;
@@ -1016,26 +1121,25 @@ export default {
 
     .footer-info {
       display: flex;
-      gap: 13rem;
-      margin: 0 80px;
+      gap: 7rem;
+      margin: 0 60px;
+      color: #fff;
     }
 
 
-    main {
+      .footer-info a{
+      color: #5d5a88;
+    }
 
+
+
+    main {
+      padding: 5rem 0;
       background: #f9f9ff;
       background-image: radial-gradient(circle, #00000046 1px, transparent 1.5px);
       background-size: 25px 25px;
       background-repeat: repeat;
     }
-
-    .section1 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-    }
-
 
 
 
@@ -1065,13 +1169,6 @@ export default {
       border-radius: 30px;
     }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #ffffff;
-
-    }
 
     .home {
       margin-left: 5rem;
@@ -1130,8 +1227,15 @@ export default {
 
   @media only screen and (min-width: 992px) {
 
+      .info h3 {
+      font-size: 20px;
+      width: 20rem;
+    }
+
+
     .botoes{
       display: flex;
+      flex-direction: row;
       align-items: center;
       gap: 2rem;
     }
@@ -1159,7 +1263,7 @@ export default {
     .wellcome h2{
       width: 60rem;
       margin: 0 auto;
-      font-size: 4.3rem;
+      font-size: 2.3rem;
       color: #000000;
     }
 
@@ -1185,7 +1289,7 @@ export default {
 
     li span {
       font-weight: 600;
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
 
 
@@ -1201,7 +1305,7 @@ export default {
 
     .text-align h5 {
       font-weight: 600;
-      font-size: 2rem;
+      font-size: 20px;
     }
 
     .alin {
@@ -1217,23 +1321,25 @@ export default {
     }
 
     .rigth img {
-      width: 40rem;
+      width: 100%;
       border-radius: 1rem;
     }
 
     .infinito {
       display: flex;
-      gap: 3rem;
+      padding: 4rem 0;
+      gap: 1rem;
       flex-direction: column;
     }
 
     .info h3 {
+      font-size: 20px;
       width: 20rem;
     }
 
     .info small {
       display: flex;
-      text-justify: auto;
+      text-align: justify;
       width: 18rem;
 
     }
@@ -1241,7 +1347,7 @@ export default {
     .icon {
       padding: 1rem;
       background: #c7c7c741;
-      margin-bottom: 3.3rem;
+      margin-bottom: 2.3rem;
 
 
     }
@@ -1250,13 +1356,13 @@ export default {
 
       display: flex;
       justify-content: space-between;
-      gap: 2rem;
+      gap: 1rem;
     }
 
     .ideas {
-      margin: 10rem 12rem;
+   
       display: flex;
-      gap: 33rem;
+      flex-direction: row;
       justify-content: space-between;
       align-items: center;
     }
@@ -1277,43 +1383,19 @@ export default {
 
     .footer-info {
       display: flex;
-      gap: 53rem;
+      gap: 13rem;
       margin: 0 80px;
+      color: #fff;
     }
 
-    .lucas {
-      position: absolute;
-      top: 23rem;
-      left: 12rem;
-      animation: move 5s infinite;
-      transition: right 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    .footer-info a{
+        color: #5d5a88;
     }
 
-    .fernando {
-      position: absolute;
-      top: 13rem;
-      left: 82rem;
-    }
-
-    .fernando span {
-      position: relative;
-      top: 1rem;
-      padding: 0.2rem 0.4rem;
-      color: #ffffff;
-      background: rgb(211, 194, 8);
-    }
-
-    .lucas span {
-      padding: 0.2rem 0.4rem;
-      position: relative;
-      top: 1rem;
-      font-weight: 500;
-
-      color: #ffffff;
-      background: #5d5a88;
-    }
-
+  
+    
     main {
+      padding: 12rem 0;
       background: #f9f9ff;
       background-image: radial-gradient(circle, #00000046 1px, transparent 1.5px);
       background-size: 25px 25px;
@@ -1322,7 +1404,7 @@ export default {
 
     .section1 {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
       gap: 2rem;
     }
@@ -1337,33 +1419,7 @@ export default {
       margin-top: 80px;
       justify-content: center;
     }
-
-    .card {
-      width: 313.62px;
-      height: 213.61px;
-      border-radius: 30px;
-      background: url("https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80");
-      background-position: center;
-      background-size: cover;
-    }
-
-    .card2 {
-      width: 470.38px;
-      height: 332.46px;
-      background: url("https://images.unsplash.com/photo-1532102235608-dc8fc689c9ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-      background-position: center;
-      background-size: cover;
-      border-radius: 30px;
-    }
-
-    nav {
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #ffffff;
-
-    }
+   
 
     .home {
       margin-left: 5rem;
@@ -1442,40 +1498,8 @@ export default {
 
     .footer-info {
       display: flex;
-      gap: 53rem;
-      margin: 0 80px;
-    }
-
-    .lucas {
-      position: absolute;
-      top: 23rem;
-      left: 12rem;
-      animation: move 5s infinite;
-      transition: right 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-    }
-
-    .fernando {
-      position: absolute;
-      top: 13rem;
-      left: 82rem;
-    }
-
-    .fernando span {
-      position: relative;
-      top: 1rem;
-      padding: 0.2rem 0.4rem;
-      color: #ffffff;
-      background: rgb(211, 194, 8);
-    }
-
-    .lucas span {
-      padding: 0.2rem 0.4rem;
-      position: relative;
-      top: 1rem;
-      font-weight: 500;
-
-      color: #ffffff;
-      background: #5d5a88;
+      gap: 63rem;
+      margin: 0 60px;
     }
 
     main {
@@ -1591,7 +1615,102 @@ export default {
 
   @media (min-width: 1400px) {
 
+    .ideas
 
+    .wellcome{
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      gap: 3rem;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .wellcome h2{
+      width: 60rem;
+      margin: 0 auto;
+      font-size: 2.3rem;
+      color: #000000;
+    }
+
+    .wellcome .btnget{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      width: 13rem;
+    }
+    .btn .creacte {
+      margin-left: 14rem;
+    }
+
+    .section2 .btn .creacte {
+      margin-left: -14rem;
+    }
+
+    li {
+      display: flex;
+      font-size: 1.1rem;
+      gap: 1rem;
+    }
+
+    li span {
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+
+
+    .text-align ul {
+      margin-top: 3rem;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      gap: 3rem;
+      width: 26rem;
+    }
+
+    .text-align h5 {
+      font-weight: 600;
+      font-size: 20px;
+    }
+
+    .alin {
+      text-align: justify;
+    }
+
+    .text-align h5 {
+      text-align: right;
+    }
+
+    .collabor {
+      padding: 4rem 0;
+    }
+
+    .rigth img {
+      width: 40rem;
+      border-radius: 1rem;
+    }
+
+    .infinito {
+      display: flex;
+      padding: 4rem 0;
+      gap: .3rem;
+      flex-direction: column;
+    }
+
+    .info h3 {
+      font-size: 20px;
+      width: 20rem;
+    }
+
+    .info small {
+      display: flex;
+      text-align: justify;
+      width: 28rem;
+
+    }
 
     .info-ideas{
       display: flex;
@@ -1610,6 +1729,8 @@ export default {
 
     .ideas{
       display: flex;
+      justify-content: center;
+      gap: 20rem;
       flex-direction: row;
     }
 
