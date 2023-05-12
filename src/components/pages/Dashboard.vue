@@ -1,7 +1,8 @@
 <template>
-  <div class="opacity-layout">
+  <div id="app">
     <Search/>
     <Logoleft/>
+    <Card/>
   </div>
   
 </template>
@@ -13,11 +14,10 @@ import {
   GET_USER_TOKEN_GETTER,
   LOADING_SPINNER_SHOW_MUTATION,
 } from "../../store/storeconstants";
-import Nav from "../Navbar/Nav.vue";
-import Methodcard from "./Methoscard.vue";
-import Popup from "./Popup.vue";
 import Search from './Search.vue';
 import Logoleft from './Logoleft.vue';
+import Card from "./Card.vue";
+
 
 
 export default {
@@ -53,311 +53,33 @@ export default {
       }
     }
   },
-  components: { Nav, Methodcard, Popup,Search, Logoleft},
+  components: { Search, Logoleft, Card},
 };
 </script>
 
-<style scoped>
-.back {
-  padding-bottom: 3rem;
-}
+<style scoped> 
+* {
+  font-family: Arial, Helvetica, sans-serif;
 
-/* Reset de estilos padrão do select */
-select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-color: transparent;
-  border: none;
-  font-size: 16px;
-  padding: 10px;
-  width: 150px;
-  cursor: pointer;
-}
-
-/* Estilo do select */
-.select-input {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-  color: #555;
-}
-
-.recent-selec {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-a {
-  color: #222;
-
-  text-decoration: none;
-}
-
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
-
-.back {
-  background-color: #f8faf9;
-}
-
-.card1 {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #e5e5e5;
-  border-radius: 6px;
-}
-
-.link {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
-}
-
-.recent {
-  padding-top: 2rem;
-  margin-top: 10rem;
-}
-
-.card-group {
-  display: flex;
-}
-
-.card {
-  border: 1px solid #e5e5e5;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 3rem;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  background: rgb(255, 255, 255);
-}
-
-.card div:hover,
-.card1:hover {
-  background-color: white;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.5s ease-in-out;
-}
-
-/* Mobile phones */
-@media only screen and (max-width: 480px) {
-  /* CSS styles for mobile phones */
-
-  .recent {
-    margin-top: 10rem;
-  }
-
-  .card-group {
-    display: flex;
-  }
-
-  .card,
-  .card1 {
-    border: 1px solid #e5e5e5;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 3rem;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    background: rgb(255, 255, 255);
-  }
 } 
 
-.container {
-  display: flex;
-  flex-direction: row;
-  gap: 22px;
+body {
+  margin: 0;
+} 
+
+#app {
+  -webkit-font-smothing: antialiased;
+  -moz-osx-font-smothing: grayscale; 
+
+  height: 100vh;
+  display: grid;
+
+  grid-template-rows: 60px 1fr 40px;
+  grid-template-columns: 300px 1fr;
+  grid-template-areas: 
+  "nav nav"
+  "menu content"
+  "menu content"
 }
 
-/* Tablets */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-  .card1 {
-    max-width: 20rem;
-    margin: 0 auto;
-  }
-
-  .card,
-  .card1 {
-    border: 1px solid #e5e5e5;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 3rem;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-  }
-
-  .recent {
-    margin: 10rem 5rem;
-  }
-
-  .card-group {
-    max-width: 20em;
-    margin: 0 auto;
-    gap: 2rem;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .card,
-  .card1 {
-    width: 20rem;
-    height: 20rem;
-  }
-}
-
-/* Laptops and desktops */
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-  .recent {
-    margin: 10rem 5rem;
-  }
-
-  .card-group {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-  }
-
-  .card1 {
-    margin-top: 3rem;
-  }
-
-  .card {
-    border: 1px solid #e5e5e5;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 3rem;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    background: rgb(255, 255, 255);
-  }
-
-  .card div:hover,
-  .card1:hover {
-    background-color: white;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.5s ease-in-out;
-  }
-
-  .card,
-  .card1 {
-    width: 20rem;
-    height: 20rem;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .container {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-
-  .card1 {
-    margin-top: 3rem;
-  }
-
-  .recent {
-    margin-top: 10rem 5rem;
-  }
-
-  .card-group {
-    display: flex;
-    gap: 3rem;
-  }
-
-  .card {
-    border: 1px solid #e5e5e5;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 3rem;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    background: rgb(255, 255, 255);
-  }
-
-  .card div:hover,
-  .card1:hover {
-    background-color: white;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.5s ease-in-out;
-  }
-
-  .card,
-  .card1 {
-    width: 20rem;
-    height: 20rem;
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .container {
-    margin-left: 4rem;
-  }
-
-  .recent {
-    margin: 10rem 5rem;
-  }
-
-  .card-group {
-    max-width: 90rem;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .card {
-    border: 1px solid #e5e5e5;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 3rem;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    background: rgb(255, 255, 255);
-  }
-
-  .card div:hover,
-  .card1:hover {
-    background-color: white;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.5s ease-in-out;
-  }
-
-  .card,
-  .card1 {
-    width: 20rem;
-    height: 20rem;
-  }
-}
-
-/* XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {
-  .recent {
-    margin-top: 10rem;
-  }
-
-  .card-group {
-    display: flex;
-  }
-
-  .card {
-    width: 20rem;
-    height: 20rem;
-  }
-}
 </style>

@@ -20,7 +20,7 @@
           </fieldset>
 
           <select v-model="visibility">
-            <option value="" disabled>Select the text</option>
+            <option value="" disabled>Select...</option>
             <option value="public">Public</option>
             <option value="private">Private</option>
           </select>
@@ -113,7 +113,7 @@ input,
 .btn,
 select {
   width: 100%;
-  padding: 10px;
+  padding: 6px;
   border: 1px solid #888;
   border-radius: 5px;
   outline: none;
@@ -159,8 +159,11 @@ select:focus, input:focus {
 } 
 
 .plus {
-  font-size: 60px;
-  font-weight: 100;
+  font-size: 48px;
+} 
 
+button {
+  width: 100%;
+  height: 100%;
 }
 </style>
