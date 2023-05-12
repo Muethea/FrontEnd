@@ -39,7 +39,8 @@ library.add(
   faUser,
   faPhone,
   faVideo,
-  faShare
+  faShare,
+  faUsers
 )
 
 const app = createApp(App)

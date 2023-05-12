@@ -91,8 +91,8 @@
             <small>You need to be free and get an infinite space for your ideas to flow </small>
           </div>
         </div>
-        <div class="btn">
-          <button type="button" class="btn.btn  creacte">
+        <div class="w">
+          <button type="button" class="btn  creacte">
             Creacte a whiteboard
           </button>
         </div>
@@ -128,7 +128,7 @@
               Generate results quickly with hundreds of templates for retrospectives, brainstorms, and more.
             </li>
           </ul>
-          <div class="btn">
+          <div class="w">
             <button type="button" class="btn  creacte">
               Creacte a whiteboard
             </button>
@@ -357,7 +357,7 @@ export default {
       width: 24rem;
     }
 
-    .btn {
+    .w {
       display: flex;
       justify-content: center;
     }
@@ -408,11 +408,12 @@ export default {
     border-radius: 1rem;
   }
 
-  .btn .creacte {
+  .w .creacte {
     border: none;
     color: #fff;
     width: 12rem;
     background: #5d5a88;
+    margin-bottom: 3rem;
   }
 
   .opacity-layout#blur.active {
@@ -559,23 +560,7 @@ export default {
     justify-content: center;
   }
 
-  .card {
-    width: 313.62px;
-    height: 213.61px;
-    border-radius: 30px;
-    background: url("https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80");
-    background-position: center;
-    background-size: cover;
-  }
 
-  .card2 {
-    width: 470.38px;
-    height: 332.46px;
-    background: url("https://images.unsplash.com/photo-1532102235608-dc8fc689c9ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-    background-position: center;
-    background-size: cover;
-    border-radius: 30px;
-  }
 
   .home {
     margin-left: 5rem;
@@ -646,17 +631,12 @@ export default {
     font-weight: bold;
   }
 
-    /* CSS styles for mobile phones */
-    .video {
-      width: 23rem;
-      height: 20rem;
-    }
-
     footer {
       display: flex;
       align-items: center;
       margin-top: 2rem;
       height: 5rem;
+         color: #fff;
 
     }
 
@@ -666,6 +646,7 @@ export default {
       flex-direction: column;
       gap: 1rem;
       margin: 0 2rem;
+      color: #fff;
     }
 
   
@@ -695,24 +676,6 @@ export default {
       gap: 2rem;
       margin-top: 80px;
       justify-content: center;
-    }
-
-    .card {
-      width: 400.62px;
-      height: 332.46px;
-      border-radius: 30px;
-      background: url("https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80");
-      background-position: center;
-      background-size: cover;
-    }
-
-    .card2 {
-      width: 400.38px;
-      height: 332.46px;
-      background: url("https://images.unsplash.com/photo-1532102235608-dc8fc689c9ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-      background-position: center;
-      background-size: cover;
-      border-radius: 30px;
     }
 
     .home {
@@ -840,6 +803,11 @@ export default {
       text-align: center;
       gap: 1rem;
       margin: 0 80px;
+         color: #fff;
+    }
+
+    .footer-info a{
+      color: #5d5a88;
     }
 
 
@@ -867,24 +835,6 @@ export default {
       gap: 2rem;
       margin-top: 80px;
       justify-content: center;
-    }
-
-    .card {
-      width: 400.62px;
-      height: 332.46px;
-      border-radius: 10px;
-      background: url("https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80");
-      background-position: center;
-      background-size: cover;
-    }
-
-    .card2 {
-      width: 400.38px;
-      height: 332.46px;
-      background: url("https://images.unsplash.com/photo-1532102235608-dc8fc689c9ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-      background-position: center;
-      background-size: cover;
-      border-radius: 10px;
     }
 
     .home {
@@ -1104,7 +1054,7 @@ export default {
 
     .icon {
       padding: 1rem;
-      background: #c7c7c741;
+      background: #f1f1f141;
     }
     .terms {
       position: relative;
@@ -1139,34 +1089,6 @@ export default {
       background-image: radial-gradient(circle, #00000046 1px, transparent 1.5px);
       background-size: 25px 25px;
       background-repeat: repeat;
-    }
-
-
-
-    .cards {
-      display: flex;
-
-      align-items: center;
-      margin-top: 80px;
-      justify-content: center;
-    }
-
-    .card {
-      width: 313.62px;
-      height: 213.61px;
-      border-radius: 30px;
-      background: url("https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80");
-      background-position: center;
-      background-size: cover;
-    }
-
-    .card2 {
-      width: 470.38px;
-      height: 332.46px;
-      background: url("https://images.unsplash.com/photo-1532102235608-dc8fc689c9ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-      background-position: center;
-      background-size: cover;
-      border-radius: 30px;
     }
 
 
@@ -1273,11 +1195,11 @@ export default {
       text-align: center;
       width: 13rem;
     }
-    .btn .creacte {
+     .creacte {
       margin-left: 14rem;
     }
 
-    .section2 .btn .creacte {
+    .section2  .creacte {
       margin-left: -14rem;
     }
 
@@ -1344,13 +1266,13 @@ export default {
 
     }
 
-    .icon {
+     .icon {
       padding: 1rem;
-      background: #c7c7c741;
-      margin-bottom: 2.3rem;
-
-
+      background: #f1f1f173;
+        margin-bottom: 2.3rem;
     }
+
+
 
     .info-ideas {
 
